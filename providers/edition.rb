@@ -140,6 +140,7 @@ def prepare_vs2017_options
   option_allWorkloads = node['visualstudio'][new_resource.version.to_s]['allWorkloads']
   option_includeRecommended = node['visualstudio'][new_resource.version.to_s]['includeRecommended']
   option_include_optional = node['visualstudio'][new_resource.version.to_s]['includeOptional']
+  options_include_noUpdateInstaller = node['visualstudio'][new_resource.version.to_s]['noUpdateInstaller']
   options_components_to_install = ''
 
   # Merge the VS version and edition default AdminDeploymentFile.xml item's with customized install_items  
@@ -157,6 +158,7 @@ def prepare_vs2017_options
   setup_options << " --allWorkloads" if option_allWorkloads
   setup_options << " --includeRecommended" if option_includeRecommended
   setup_options << " --includeOptional" if option_include_optional
+  setup_options << " --noUpdateInstaller" if options_include_noUpdateInstaller
   setup_options << options_components_to_install unless options_components_to_install.empty?
 
   setup_options

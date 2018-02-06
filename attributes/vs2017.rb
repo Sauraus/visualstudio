@@ -25,6 +25,7 @@ default['visualstudio']['2017']['all'] = false
 default['visualstudio']['2017']['allWorkloads'] = false
 default['visualstudio']['2017']['includeRecommended'] = true
 default['visualstudio']['2017']['includeOptional'] = false
+default['visualstudio']['2017']['noUpdateInstaller'] = true
 
 # Test Professional w/Update1 https://docs.microsoft.com/en-us/visualstudio/install/workload-component-id-vs-test-professional
 default['visualstudio']['2017']['testprofessional']['installer_file'] = 'vs_testprofessional.exe'

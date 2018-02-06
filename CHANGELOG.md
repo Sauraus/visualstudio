@@ -2,6 +2,9 @@
 
 This file is used to list changes made in each version of visualstudion.
 
+## 1.2.3
+* Do not update the 2017 installer by default as this hangs the installation process 
+
 ## 1.2.2
 
 * Make the installers download components from the web when needed
